@@ -1,0 +1,420 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "69eebe3f-c26f-32fe-929b-85e7584a48b7",
+            "id" : "ecf97124-3c61-3059-848b-e93b7e3d9b6c",
+            "name" : "LogAttribute",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "69eebe3f-c26f-32fe-929b-85e7584a48b7",
+          "identifier" : "b3422fe4-0dda-3a32-811b-31ba009f5032",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "69eebe3f-c26f-32fe-929b-85e7584a48b7",
+            "id" : "6b473e59-8bac-38d0-8448-8e2689abaf30",
+            "name" : "GenerateFlowFile",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        } ],
+        "controllerServices" : [ ],
+        "funnels" : [ ],
+        "identifier" : "69eebe3f-c26f-32fe-929b-85e7584a48b7",
+        "inputPorts" : [ ],
+        "labels" : [ ],
+        "name" : "aaa",
+        "outputPorts" : [ ],
+        "position" : {
+          "x" : 309.0,
+          "y" : 230.0
+        },
+        "processGroups" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.9.2"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "69eebe3f-c26f-32fe-929b-85e7584a48b7",
+          "identifier" : "12b4af93-1afd-38fc-9f64-2db738f21cfe",
+          "name" : "AttributesToCSV",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1061.0,
+            "y" : 307.0
+          },
+          "properties" : {
+            "null-value" : "false",
+            "include-core-attributes" : "true",
+            "destination" : "flowfile-attribute",
+            "include-schema" : "false"
+          },
+          "propertyDescriptors" : {
+            "null-value" : {
+              "displayName" : "Null Value",
+              "identifiesControllerService" : false,
+              "name" : "null-value",
+              "sensitive" : false
+            },
+            "include-core-attributes" : {
+              "displayName" : "Include Core Attributes",
+              "identifiesControllerService" : false,
+              "name" : "include-core-attributes",
+              "sensitive" : false
+            },
+            "attributes-regex" : {
+              "displayName" : "Attributes Regular Expression",
+              "identifiesControllerService" : false,
+              "name" : "attributes-regex",
+              "sensitive" : false
+            },
+            "destination" : {
+              "displayName" : "Destination",
+              "identifiesControllerService" : false,
+              "name" : "destination",
+              "sensitive" : false
+            },
+            "include-schema" : {
+              "displayName" : "Include Schema",
+              "identifiesControllerService" : false,
+              "name" : "include-schema",
+              "sensitive" : false
+            },
+            "attribute-list" : {
+              "displayName" : "Attribute List",
+              "identifiesControllerService" : false,
+              "name" : "attribute-list",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.AttributesToCSV",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.9.2"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "69eebe3f-c26f-32fe-929b-85e7584a48b7",
+          "identifier" : "ecf97124-3c61-3059-848b-e93b7e3d9b6c",
+          "name" : "LogAttribute",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 493.0,
+            "y" : 439.0
+          },
+          "properties" : {
+            "character-set" : "UTF-8",
+            "Log Level" : "info",
+            "attributes-to-log-regex" : ".*",
+            "Log Payload" : "false"
+          },
+          "propertyDescriptors" : {
+            "Log prefix" : {
+              "displayName" : "Log prefix",
+              "identifiesControllerService" : false,
+              "name" : "Log prefix",
+              "sensitive" : false
+            },
+            "character-set" : {
+              "displayName" : "Character Set",
+              "identifiesControllerService" : false,
+              "name" : "character-set",
+              "sensitive" : false
+            },
+            "Log Level" : {
+              "displayName" : "Log Level",
+              "identifiesControllerService" : false,
+              "name" : "Log Level",
+              "sensitive" : false
+            },
+            "attributes-to-ignore-regex" : {
+              "displayName" : "Attributes to Ignore by Regular Expression",
+              "identifiesControllerService" : false,
+              "name" : "attributes-to-ignore-regex",
+              "sensitive" : false
+            },
+            "Attributes to Ignore" : {
+              "displayName" : "Attributes to Ignore",
+              "identifiesControllerService" : false,
+              "name" : "Attributes to Ignore",
+              "sensitive" : false
+            },
+            "Attributes to Log" : {
+              "displayName" : "Attributes to Log",
+              "identifiesControllerService" : false,
+              "name" : "Attributes to Log",
+              "sensitive" : false
+            },
+            "attributes-to-log-regex" : {
+              "displayName" : "Attributes to Log by Regular Expression",
+              "identifiesControllerService" : false,
+              "name" : "attributes-to-log-regex",
+              "sensitive" : false
+            },
+            "Log Payload" : {
+              "displayName" : "Log Payload",
+              "identifiesControllerService" : false,
+              "name" : "Log Payload",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.LogAttribute",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.9.2"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "69eebe3f-c26f-32fe-929b-85e7584a48b7",
+          "identifier" : "6b473e59-8bac-38d0-8448-8e2689abaf30",
+          "name" : "GenerateFlowFile",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 525.0,
+            "y" : 73.0
+          },
+          "properties" : {
+            "character-set" : "UTF-8",
+            "File Size" : "0B",
+            "Batch Size" : "1",
+            "Unique FlowFiles" : "false",
+            "Data Format" : "Text"
+          },
+          "propertyDescriptors" : {
+            "character-set" : {
+              "displayName" : "Character Set",
+              "identifiesControllerService" : false,
+              "name" : "character-set",
+              "sensitive" : false
+            },
+            "File Size" : {
+              "displayName" : "File Size",
+              "identifiesControllerService" : false,
+              "name" : "File Size",
+              "sensitive" : false
+            },
+            "generate-ff-custom-text" : {
+              "displayName" : "Custom Text",
+              "identifiesControllerService" : false,
+              "name" : "generate-ff-custom-text",
+              "sensitive" : false
+            },
+            "Batch Size" : {
+              "displayName" : "Batch Size",
+              "identifiesControllerService" : false,
+              "name" : "Batch Size",
+              "sensitive" : false
+            },
+            "Unique FlowFiles" : {
+              "displayName" : "Unique FlowFiles",
+              "identifiesControllerService" : false,
+              "name" : "Unique FlowFiles",
+              "sensitive" : false
+            },
+            "Data Format" : {
+              "displayName" : "Data Format",
+              "identifiesControllerService" : false,
+              "name" : "Data Format",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-cdc-mysql-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.9.2"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "69eebe3f-c26f-32fe-929b-85e7584a48b7",
+          "identifier" : "88f8f3b7-1050-3ac1-adbd-09828a5a34bf",
+          "name" : "CaptureChangeMySQL",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1145.0,
+            "y" : 46.0
+          },
+          "properties" : {
+            "capture-change-mysql-include-ddl-events" : "false",
+            "capture-change-mysql-driver-class" : "com.mysql.jdbc.Driver",
+            "capture-change-mysql-include-begin-commit" : "false",
+            "capture-change-mysql-retrieve-all-records" : "true",
+            "capture-change-mysql-state-update-interval" : "0 seconds",
+            "capture-change-mysql-max-wait-time" : "30 seconds"
+          },
+          "propertyDescriptors" : {
+            "capture-change-mysql-include-ddl-events" : {
+              "displayName" : "Include DDL Events",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-include-ddl-events",
+              "sensitive" : false
+            },
+            "capture-change-mysql-db-name-pattern" : {
+              "displayName" : "Database/Schema Name Pattern",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-db-name-pattern",
+              "sensitive" : false
+            },
+            "capture-change-mysql-dist-map-cache-client" : {
+              "displayName" : "Distributed Map Cache Client",
+              "identifiesControllerService" : true,
+              "name" : "capture-change-mysql-dist-map-cache-client",
+              "sensitive" : false
+            },
+            "capture-change-mysql-init-seq-id" : {
+              "displayName" : "Initial Sequence ID",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-init-seq-id",
+              "sensitive" : false
+            },
+            "capture-change-mysql-name-pattern" : {
+              "displayName" : "Table Name Pattern",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-name-pattern",
+              "sensitive" : false
+            },
+            "capture-change-mysql-driver-class" : {
+              "displayName" : "MySQL Driver Class Name",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-driver-class",
+              "sensitive" : false
+            },
+            "capture-change-mysql-driver-locations" : {
+              "displayName" : "MySQL Driver Location(s)",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-driver-locations",
+              "sensitive" : false
+            },
+            "capture-change-mysql-include-begin-commit" : {
+              "displayName" : "Include Begin/Commit Events",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-include-begin-commit",
+              "sensitive" : false
+            },
+            "capture-change-mysql-server-id" : {
+              "displayName" : "Server ID",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-server-id",
+              "sensitive" : false
+            },
+            "capture-change-mysql-init-binlog-filename" : {
+              "displayName" : "Initial Binlog Filename",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-init-binlog-filename",
+              "sensitive" : false
+            },
+            "capture-change-mysql-init-binlog-position" : {
+              "displayName" : "Initial Binlog Position",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-init-binlog-position",
+              "sensitive" : false
+            },
+            "capture-change-mysql-hosts" : {
+              "displayName" : "MySQL Hosts",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-hosts",
+              "sensitive" : false
+            },
+            "capture-change-mysql-username" : {
+              "displayName" : "Username",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-username",
+              "sensitive" : false
+            },
+            "capture-change-mysql-retrieve-all-records" : {
+              "displayName" : "Retrieve All Records",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-retrieve-all-records",
+              "sensitive" : false
+            },
+            "capture-change-mysql-state-update-interval" : {
+              "displayName" : "State Update Interval",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-state-update-interval",
+              "sensitive" : false
+            },
+            "capture-change-mysql-password" : {
+              "displayName" : "Password",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-password",
+              "sensitive" : false
+            },
+            "capture-change-mysql-max-wait-time" : {
+              "displayName" : "Max Wait Time",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-max-wait-time",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.cdc.mysql.processors.CaptureChangeMySQL",
+          "yieldDuration" : "1 sec"
+        } ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      }
+    }
+  }
+}
